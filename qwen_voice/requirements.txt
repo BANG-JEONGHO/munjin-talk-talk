@@ -1,0 +1,5 @@
+qwen-tts
+pandas
+soundfile
+tqdm
+pyyaml

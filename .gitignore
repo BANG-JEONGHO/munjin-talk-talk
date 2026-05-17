@@ -1,0 +1,58 @@
+
+# Qwen voice clone local data
+qwen_voice/data/
+qwen_voice/outputs/
+qwen_voice/models/
+qwen_voice/checkpoints/
+
+# audio files
+*.wav
+*.mp3
+*.flac
+*.m4a
+
+# model weights
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+
+# secrets
+.env
+*.key
+*.pem
+
+# python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Qwen voice clone local data
+qwen_voice/data/
+qwen_voice/outputs/
+qwen_voice/models/
+qwen_voice/checkpoints/
+
+# audio files
+*.wav
+*.mp3
+*.flac
+*.m4a
+
+# model weights
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+
+# secrets
+.env
+*.key
+*.pem
+
+# python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

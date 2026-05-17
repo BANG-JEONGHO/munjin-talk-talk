@@ -1,0 +1,2 @@
+ref_speaker_id,ref_audio,ref_text
+spk001,qwen_voice/data/reference_audio/spk001_ref.wav,"참조 음성의 전사문 예시입니다."
