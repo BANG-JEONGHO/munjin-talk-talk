@@ -1,37 +1,23 @@
-# Qwen Voice Clone Local Test
+# qwen_voice
 
-문진톡톡 합성 문진 발화 데이터 생성을 위한 Qwen Clone 로컬 테스트 폴더입니다.
+Qwen Voice Clone 로컬 테스트 실행 파일을 모아둔 폴더입니다.
 
-## 목적
+자세한 프로젝트 설명, 실행 순서, 데이터 관리 원칙은 repository root의 `README.md`를 확인하세요.
 
-- AI Hub 강원권/고령층 발화 데이터를 reference voice로 활용
-- 문진톡톡 서비스용 합성 문진 발화 샘플 생성
-- 로컬 환경에서 먼저 1개 생성 테스트
-- 이후 GPU 서버에서 batch 생성으로 확장
+## 이 폴더의 역할
 
-## 현재 로컬 기준
+- Qwen TTS 환경 확인
+- reference audio 기반 단건 생성 테스트
+- 문진 대본 batch 생성 테스트
+- 생성 결과 metadata 관리
 
-- attn_implementation: eager
-- batch size: 1
-- 실제 음성 데이터와 생성 결과물은 GitHub에 업로드하지 않음
+## 주의
 
-## GitHub에 올리지 않는 것
+다음 파일과 폴더는 GitHub에 올리지 않습니다.
 
-- AI Hub 원본 데이터
+- `data/`
+- `outputs/`
 - reference audio
-- 생성된 wav 파일
-- 모델 weight
-- outputs
-- .env
-
-## 실행 순서
-
-1. 기존 conda 환경 활성화
-2. requirements 설치
-3. 환경 확인 스크립트 실행
-
-명령어:
-
-conda activate <기존 Qwen 환경 이름>
-pip install -r qwen_voice/requirements.txt
-python qwen_voice/check_env.py
+- generated wav
+- model weight
+- `.env`
