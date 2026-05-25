@@ -1,0 +1,2824 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "source": "서울아산병원 질환백과 호흡기 섹션",
+    "license_note": "학내 사업단 MVP 데모 한정. 실서비스 배포 전 별도 라이선스 협의 필요",
+    "total_diseases": 63,
+    "total_slots": 87,
+    "auto_generated_fields": [
+      "slot_id",
+      "canonical_name",
+      "risk_level",
+      "related_diseases"
+    ],
+    "manual_fields_required": [
+      "definition",
+      "positive_examples",
+      "ambiguous_examples"
+    ],
+    "completed_count": 10,
+    "todo_count": 77,
+    "note": "상위 10개 슬롯은 의료진 검토용 샘플로 완성. 나머지 77개는 같은 패턴으로 작성 필요. _completed: true 인 카드를 참고."
+  },
+  "slot_cards": [
+    {
+      "slot_id": "cough",
+      "canonical_name": "기침",
+      "definition": "기관지·인후 자극에 의해 발생하는 반사적 호기. 발생 패턴(마른/가래 동반), 빈도, 야간 악화 여부에 따라 임상 의미가 다름.",
+      "positive_examples": [
+        "기침이 나요",
+        "기침이 계속 나와요",
+        "콜록콜록거려요",
+        "기침이 멈추질 않아요",
+        "밤마다 기침이 심해져요"
+      ],
+      "ambiguous_examples": [
+        "목이 간질간질해요",
+        "헛기침이 나요"
+      ],
+      "negative_examples": [
+        "기침은 없어요",
+        "기침 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 42,
+      "related_diseases": [
+        "가습기 살균제 연관 폐질환",
+        "결핵",
+        "규폐증",
+        "급성 기관지염",
+        "기관지확장증",
+        "꽃가루 알레르기",
+        "낭종성 폐질환",
+        "농흉",
+        "늑막염",
+        "디프테리아",
+        "만성 기관지염",
+        "만성 기침",
+        "만성 폐쇄성 폐질환",
+        "만성 폐질환",
+        "미만성 간질성 폐질환",
+        "백일해",
+        "병원 감염성 폐렴",
+        "비소세포성 폐암",
+        "상기도 감염",
+        "상대정맥 증후군",
+        "소세포성 폐암",
+        "속립성 결핵",
+        "악성 종격동 종양",
+        "악성 중피종",
+        "악성 흉막 삼출",
+        "양성 종격동 종양",
+        "중동 호흡기 증후군",
+        "중증 급성 호흡기 증후군",
+        "지역사회성 폐렴",
+        "진폐증",
+        "천식",
+        "코로나-19",
+        "특발성 폐섬유화증",
+        "폐 농양",
+        "폐결핵",
+        "폐기종",
+        "폐렴",
+        "폐부종",
+        "폐암",
+        "흉막 삼출",
+        "흉선암",
+        "히스토플라즈마증"
+      ],
+      "_completed": true
+    },
+    {
+      "slot_id": "dyspnea",
+      "canonical_name": "호흡곤란",
+      "definition": "호흡 시 불편감 또는 숨이 가쁜 느낌. 운동 시 vs 안정 시 발현, 발현 속도에 따라 응급성 평가 필요.",
+      "positive_examples": [
+        "숨이 차요",
+        "숨쉬기 힘들어요",
+        "숨이 가빠요",
+        "걸을 때 숨이 차요",
+        "조금만 움직여도 숨이 차요"
+      ],
+      "ambiguous_examples": [
+        "답답해요",
+        "가슴이 답답해요",
+        "막혀요"
+      ],
+      "negative_examples": [
+        "호흡곤란은 없어요",
+        "호흡곤란 안 해요"
+      ],
+      "risk_level": "medium",
+      "disease_count": 39,
+      "related_diseases": [
+        "가습기 살균제 연관 폐질환",
+        "공기가슴증",
+        "과호흡 증후군",
+        "급성 기관지염",
+        "기관 협착",
+        "꽃가루 알레르기",
+        "낭종성 폐질환",
+        "농흉",
+        "늑막염",
+        "만성 폐쇄성 폐질환",
+        "미만성 간질성 폐질환",
+        "비소세포성 폐암",
+        "상대정맥 증후군",
+        "성인 호흡곤란 증후군",
+        "신생아 호흡곤란증후군",
+        "아스페르길루스증",
+        "악성 중피종",
+        "악성 흉막 삼출",
+        "양성 종격동 종양",
+        "이물질에 의한 기도 막힘",
+        "종격동염",
+        "중동 호흡기 증후군",
+        "중증 급성 호흡기 증후군",
+        "지역사회성 폐렴",
+        "천식",
+        "코로나-19",
+        "태변 흡인 증후군",
+        "특발성 폐섬유화증",
+        "폐 농양",
+        "폐기종",
+        "폐렴",
+        "폐렴간균에 의한 폐렴",
+        "폐암",
+        "호흡성 산증",
+        "횡격막 탈장",
+        "후두개염",
+        "흉막 삼출",
+        "흉선암",
+        "히스토플라즈마증"
+      ],
+      "_completed": true
+    },
+    {
+      "slot_id": "fever",
+      "canonical_name": "열",
+      "definition": "체온 상승으로 인한 발열감. 객관 측정 체온과 환자 주관 표현을 함께 확인 필요.",
+      "positive_examples": [
+        "열이 나요",
+        "몸이 뜨거워요",
+        "미열이 있어요",
+        "어제부터 열이 났어요"
+      ],
+      "ambiguous_examples": [
+        "몸이 으슬으슬해요",
+        "후끈거려요"
+      ],
+      "negative_examples": [
+        "열은 없어요",
+        "열 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 20,
+      "related_diseases": [
+        "결핵",
+        "늑막염",
+        "디프테리아",
+        "미만성 간질성 폐질환",
+        "병원 감염성 폐렴",
+        "상기도 감염",
+        "속립성 결핵",
+        "아스페르길루스증",
+        "악성 종격동 종양",
+        "인플루엔자",
+        "종격동염",
+        "중동 호흡기 증후군",
+        "중증 급성 호흡기 증후군",
+        "코로나-19",
+        "폐 농양",
+        "폐결핵",
+        "폐렴",
+        "폐렴간균에 의한 폐렴",
+        "후두개염",
+        "히스토플라즈마증"
+      ],
+      "_completed": true
+    },
+    {
+      "slot_id": "sputum",
+      "canonical_name": "가래",
+      "definition": "기도에서 객출되는 점액성 분비물. 색·점도·양이 감별 진단에 중요.",
+      "positive_examples": [
+        "가래가 나와요",
+        "가래가 끓어요",
+        "누런 가래가 나와요",
+        "기침할 때 가래가 같이 나와요"
+      ],
+      "ambiguous_examples": [
+        "목에 뭐가 걸린 것 같아요",
+        "목이 가래낀 것 같아요"
+      ],
+      "negative_examples": [
+        "가래은 없어요",
+        "가래 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 18,
+      "related_diseases": [
+        "객혈",
+        "결핵",
+        "규폐증",
+        "급성 기관지염",
+        "기관지확장증",
+        "늑막염",
+        "만성 기관지염",
+        "만성 폐쇄성 폐질환",
+        "만성 폐질환",
+        "미만성 간질성 폐질환",
+        "병원 감염성 폐렴",
+        "속립성 결핵",
+        "지역사회성 폐렴",
+        "천식",
+        "코로나-19",
+        "폐결핵",
+        "폐기종",
+        "폐렴"
+      ],
+      "_completed": true
+    },
+    {
+      "slot_id": "chest_pain",
+      "canonical_name": "흉통",
+      "definition": "흉부의 통증 또는 불편감. 흉막성·심인성 감별 위해 발생 시점·악화 인자 확인 필요.",
+      "positive_examples": [
+        "가슴이 아파요",
+        "가슴에 통증이 있어요",
+        "숨 쉴 때 가슴이 아파요",
+        "기침할 때 가슴이 결려요"
+      ],
+      "ambiguous_examples": [
+        "가슴이 답답해요",
+        "가슴이 묵직해요"
+      ],
+      "negative_examples": [
+        "흉통은 없어요",
+        "흉통 안 해요"
+      ],
+      "risk_level": "medium",
+      "disease_count": 18,
+      "related_diseases": [
+        "공기가슴증",
+        "농흉",
+        "늑막염",
+        "병원 감염성 폐렴",
+        "비소세포성 폐암",
+        "상대정맥 증후군",
+        "악성 종격동 종양",
+        "악성 중피종",
+        "악성 흉막 삼출",
+        "양성 종격동 종양",
+        "종격동염",
+        "지역사회성 폐렴",
+        "폐렴",
+        "폐렴간균에 의한 폐렴",
+        "폐암",
+        "흉막 삼출",
+        "흉선암",
+        "히스토플라즈마증"
+      ],
+      "_completed": true
+    },
+    {
+      "slot_id": "hemoptysis",
+      "canonical_name": "객혈",
+      "definition": "기도 또는 폐에서 기인한 출혈로 객담에 혈액이 섞이거나 혈액을 객출. 응급 평가 대상.",
+      "positive_examples": [
+        "피가 섞여 나와요",
+        "기침할 때 피가 나와요",
+        "가래에 피가 있어요",
+        "객혈이 있어요"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "객혈은 없어요",
+        "객혈 안 해요",
+        "코피는 아니에요"
+      ],
+      "risk_level": "high",
+      "disease_count": 14,
+      "related_diseases": [
+        "객혈",
+        "결핵",
+        "기관지확장증",
+        "낭종성 폐질환",
+        "만성 기관지염",
+        "만성 폐질환",
+        "비소세포성 폐암",
+        "소세포성 폐암",
+        "속립성 결핵",
+        "아스페르길루스증",
+        "폐결핵",
+        "폐렴간균에 의한 폐렴",
+        "폐부종",
+        "폐암"
+      ],
+      "_completed": true
+    },
+    {
+      "slot_id": "chills",
+      "canonical_name": "오한",
+      "definition": "체온 조절 장애로 인한 한기 또는 떨림. 발열과 동반 빈번.",
+      "positive_examples": [
+        "오한이 있어요",
+        "몸이 으슬으슬해요",
+        "춥고 떨려요",
+        "몸이 떨려요"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "오한은 없어요",
+        "오한 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 10,
+      "related_diseases": [
+        "늑막염",
+        "병원 감염성 폐렴",
+        "신종 플루",
+        "아스페르길루스증",
+        "인플루엔자",
+        "종격동염",
+        "중증 급성 호흡기 증후군",
+        "폐렴",
+        "폐렴간균에 의한 폐렴",
+        "히스토플라즈마증"
+      ],
+      "_completed": true
+    },
+    {
+      "slot_id": "wheezing",
+      "canonical_name": "천명음",
+      "definition": "호흡 시 들리는 고음의 휘파람 소리. 기도 폐쇄 또는 천식 의심.",
+      "positive_examples": [
+        "숨 쉴 때 쌕쌕거려요",
+        "숨소리가 이상해요",
+        "휘파람 같은 소리가 나요",
+        "숨 쉴 때 휘이휘이 소리가 나요"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "천명음은 없어요",
+        "천명음 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 9,
+      "related_diseases": [
+        "급성 기관지염",
+        "기관지확장증",
+        "만성 폐쇄성 폐질환",
+        "성인 호흡곤란 증후군",
+        "소세포성 폐암",
+        "아스페르길루스증",
+        "양성 종격동 종양",
+        "재발성 천명",
+        "천식"
+      ],
+      "_completed": true
+    },
+    {
+      "slot_id": "cyanosis",
+      "canonical_name": "청색증",
+      "definition": "혈중 산소 부족으로 인한 입술·손톱 청자색 변화. 응급성 높음.",
+      "positive_examples": [
+        "입술이 파래졌어요",
+        "손톱이 보라색이에요",
+        "얼굴이 파래졌어요"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "청색증은 없어요",
+        "청색증 안 해요"
+      ],
+      "risk_level": "high",
+      "disease_count": 9,
+      "related_diseases": [
+        "상대정맥 증후군",
+        "성인 호흡곤란 증후군",
+        "신생아 호흡곤란증후군",
+        "이물질에 의한 기도 막힘",
+        "태변 흡인 증후군",
+        "폐기종",
+        "폐부종",
+        "횡격막 탈장",
+        "후두개염"
+      ],
+      "_completed": true
+    },
+    {
+      "slot_id": "weight_loss",
+      "canonical_name": "체중감소",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '체중감소'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "체중감소은 없어요",
+        "체중감소 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 8,
+      "related_diseases": [
+        "결핵",
+        "기관지확장증",
+        "미만성 간질성 폐질환",
+        "속립성 결핵",
+        "악성 중피종",
+        "폐 농양",
+        "폐결핵",
+        "폐암"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "headache",
+      "canonical_name": "두통",
+      "definition": "두부의 통증. 부비동 침범 시 동반 가능. 위치·강도·발생 패턴 확인 필요.",
+      "positive_examples": [
+        "머리가 아파요",
+        "두통이 있어요",
+        "이마가 아파요",
+        "머리가 무거워요"
+      ],
+      "ambiguous_examples": [
+        "어지러워요"
+      ],
+      "negative_examples": [
+        "두통은 없어요",
+        "두통 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 8,
+      "related_diseases": [
+        "상기도 감염",
+        "신종 플루",
+        "인플루엔자",
+        "중증 급성 호흡기 증후군",
+        "코로나-19",
+        "폐렴",
+        "호흡성 산증",
+        "흉선암"
+      ],
+      "_completed": true
+    },
+    {
+      "slot_id": "kr_운동_시_호흡곤란",
+      "canonical_name": "운동 시 호흡곤란",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '운동 시 호흡곤란'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "운동 시 호흡곤란은 없어요",
+        "운동 시 호흡곤란 안 해요"
+      ],
+      "risk_level": "medium",
+      "disease_count": 6,
+      "related_diseases": [
+        "규폐증",
+        "만성 기관지염",
+        "만성 폐쇄성 폐질환",
+        "미만성 간질성 폐질환",
+        "진폐증",
+        "특발성 폐섬유화증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "chest_tightness",
+      "canonical_name": "가슴 답답",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '가슴 답답'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "가슴 답답은 없어요",
+        "가슴 답답 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 5,
+      "related_diseases": [
+        "농흉",
+        "늑막염",
+        "종격동염",
+        "천식",
+        "폐기종"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "throat_pain",
+      "canonical_name": "목의 통증",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '목의 통증'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "목의 통증은 없어요",
+        "목의 통증 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 5,
+      "related_diseases": [
+        "디프테리아",
+        "상기도 감염",
+        "신종 플루",
+        "인플루엔자",
+        "코로나-19"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "fatigue",
+      "canonical_name": "피로감",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '피로감'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "피로감은 없어요",
+        "피로감 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 5,
+      "related_diseases": [
+        "만성 폐쇄성 폐질환",
+        "상기도 감염",
+        "악성 중피종",
+        "코로나-19",
+        "폐렴"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "myalgia",
+      "canonical_name": "근육통",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '근육통'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "근육통은 없어요",
+        "근육통 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 5,
+      "related_diseases": [
+        "병원 감염성 폐렴",
+        "신종 플루",
+        "인플루엔자",
+        "중증 급성 호흡기 증후군",
+        "코로나-19"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_무증상",
+      "canonical_name": "무증상",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '무증상'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "무증상은 없어요",
+        "무증상 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 5,
+      "related_diseases": [
+        "악성 종격동 종양",
+        "양성 종격동 종양",
+        "폐결절",
+        "폐암",
+        "흉선암"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_곤봉지",
+      "canonical_name": "곤봉지",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '곤봉지'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "곤봉지은 없어요",
+        "곤봉지 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 4,
+      "related_diseases": [
+        "기관지확장증",
+        "만성 폐쇄성 폐질환",
+        "미만성 간질성 폐질환",
+        "특발성 폐섬유화증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "dysphagia",
+      "canonical_name": "삼키기 곤란",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '삼키기 곤란'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "삼키기 곤란은 없어요",
+        "삼키기 곤란 안 해요"
+      ],
+      "risk_level": "medium",
+      "disease_count": 4,
+      "related_diseases": [
+        "상대정맥 증후군",
+        "양성 종격동 종양",
+        "종격동염",
+        "흉선암"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "hoarseness",
+      "canonical_name": "목소리 변화",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '목소리 변화'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "목소리 변화은 없어요",
+        "목소리 변화 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 4,
+      "related_diseases": [
+        "악성 중피종",
+        "양성 종격동 종양",
+        "폐암",
+        "후두개염"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_불안",
+      "canonical_name": "불안",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '불안'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "불안은 없어요",
+        "불안 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 3,
+      "related_diseases": [
+        "과호흡 증후군",
+        "악성 흉막 삼출",
+        "호흡성 산증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_의식_변화",
+      "canonical_name": "의식 변화",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '의식 변화'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "의식 변화은 없어요",
+        "의식 변화 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 3,
+      "related_diseases": [
+        "과호흡 증후군",
+        "이물질에 의한 기도 막힘",
+        "호흡성 산증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_저산소증",
+      "canonical_name": "저산소증",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '저산소증'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "저산소증은 없어요",
+        "저산소증 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 3,
+      "related_diseases": [
+        "기관지폐 형성이상",
+        "태변 흡인 증후군",
+        "특발성 폐섬유화증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_빈호흡",
+      "canonical_name": "빈호흡",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '빈호흡'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "빈호흡은 없어요",
+        "빈호흡 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 3,
+      "related_diseases": [
+        "농흉",
+        "태변 흡인 증후군",
+        "흉막 삼출"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "rhinorrhea",
+      "canonical_name": "콧물",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '콧물'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "콧물은 없어요",
+        "콧물 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 3,
+      "related_diseases": [
+        "디프테리아",
+        "백일해",
+        "상기도 감염"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_구토",
+      "canonical_name": "구토",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '구토'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "구토은 없어요",
+        "구토 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 3,
+      "related_diseases": [
+        "백일해",
+        "신종 플루",
+        "인플루엔자"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_흉부압박감",
+      "canonical_name": "흉부압박감",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '흉부압박감'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "흉부압박감은 없어요",
+        "흉부압박감 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 2,
+      "related_diseases": [
+        "과호흡 증후군",
+        "농흉"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_흉곽_팽윤",
+      "canonical_name": "흉곽 팽윤",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '흉곽 팽윤'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "흉곽 팽윤은 없어요",
+        "흉곽 팽윤 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 2,
+      "related_diseases": [
+        "기관지폐 형성이상",
+        "만성 폐쇄성 폐질환"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "sneezing",
+      "canonical_name": "재채기",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '재채기'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "재채기은 없어요",
+        "재채기 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 2,
+      "related_diseases": [
+        "꽃가루 알레르기",
+        "상기도 감염"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_화농성_객담",
+      "canonical_name": "화농성 객담",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '화농성 객담'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "화농성 객담은 없어요",
+        "화농성 객담 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 2,
+      "related_diseases": [
+        "농흉",
+        "폐 농양"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_빈맥",
+      "canonical_name": "빈맥",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '빈맥'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "빈맥은 없어요",
+        "빈맥 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 2,
+      "related_diseases": [
+        "농흉",
+        "디프테리아"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_권태감",
+      "canonical_name": "권태감",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '권태감'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "권태감은 없어요",
+        "권태감 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 2,
+      "related_diseases": [
+        "늑막염",
+        "중증 급성 호흡기 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "nasal_obstruction",
+      "canonical_name": "코막힘",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '코막힘'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "코막힘은 없어요",
+        "코막힘 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 2,
+      "related_diseases": [
+        "만성 기침",
+        "상기도 감염"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_설사",
+      "canonical_name": "설사",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '설사'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "설사은 없어요",
+        "설사 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 2,
+      "related_diseases": [
+        "신종 플루",
+        "인플루엔자"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_심부전",
+      "canonical_name": "심부전",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '심부전'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "심부전은 없어요",
+        "심부전 안 해요"
+      ],
+      "risk_level": "high",
+      "disease_count": 1,
+      "related_diseases": [
+        "가습기 살균제 연관 폐질환"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_폐동맥_고혈압",
+      "canonical_name": "폐동맥 고혈압",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '폐동맥 고혈압'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "폐동맥 고혈압은 없어요",
+        "폐동맥 고혈압 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "가습기 살균제 연관 폐질환"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_다발성_장기부전_증상",
+      "canonical_name": "다발성 장기부전 증상",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '다발성 장기부전 증상'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "다발성 장기부전 증상은 없어요",
+        "다발성 장기부전 증상 안 해요"
+      ],
+      "risk_level": "high",
+      "disease_count": 1,
+      "related_diseases": [
+        "가습기 살균제 연관 폐질환"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_거품이_섞인_가래",
+      "canonical_name": "거품이 섞인 가래",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '거품이 섞인 가래'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "거품이 섞인 가래은 없어요",
+        "거품이 섞인 가래 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "객혈"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_복부_통증",
+      "canonical_name": "복부 통증",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '복부 통증'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "복부 통증은 없어요",
+        "복부 통증 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "과호흡 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_복부팽만감",
+      "canonical_name": "복부팽만감",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '복부팽만감'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "복부팽만감은 없어요",
+        "복부팽만감 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "과호흡 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_부정맥",
+      "canonical_name": "부정맥",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '부정맥'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "부정맥은 없어요",
+        "부정맥 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "과호흡 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_인지장애",
+      "canonical_name": "인지장애",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '인지장애'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "인지장애은 없어요",
+        "인지장애 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "과호흡 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_가슴_두근거림",
+      "canonical_name": "가슴 두근거림",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '가슴 두근거림'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "가슴 두근거림은 없어요",
+        "가슴 두근거림 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "과호흡 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_반복되는_폐렴",
+      "canonical_name": "반복되는 폐렴",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '반복되는 폐렴'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "반복되는 폐렴은 없어요",
+        "반복되는 폐렴 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "기관 협착"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_사래걸림",
+      "canonical_name": "사래걸림",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '사래걸림'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "사래걸림은 없어요",
+        "사래걸림 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "기관 협착"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_고탄산증",
+      "canonical_name": "고탄산증",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '고탄산증'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "고탄산증은 없어요",
+        "고탄산증 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "기관지폐 형성이상"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_수유_곤란",
+      "canonical_name": "수유 곤란",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '수유 곤란'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "수유 곤란은 없어요",
+        "수유 곤란 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "기관지폐 형성이상"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_호기의_증가",
+      "canonical_name": "호기의 증가",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '호기의 증가'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "호기의 증가은 없어요",
+        "호기의 증가 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "기관지폐 형성이상"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_천식",
+      "canonical_name": "천식",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '천식'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "천식은 없어요",
+        "천식 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "기관지폐 형성이상"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_빈혈",
+      "canonical_name": "빈혈",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '빈혈'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "빈혈은 없어요",
+        "빈혈 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "기관지확장증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_눈의_충혈",
+      "canonical_name": "눈의 충혈",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '눈의 충혈'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "눈의 충혈은 없어요",
+        "눈의 충혈 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "꽃가루 알레르기"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_눈꼽",
+      "canonical_name": "눈꼽",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '눈꼽'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "눈꼽은 없어요",
+        "눈꼽 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "꽃가루 알레르기"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_호흡기감염",
+      "canonical_name": "호흡기감염",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '호흡기감염'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "호흡기감염은 없어요",
+        "호흡기감염 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "낭종성 폐질환"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_마찰음",
+      "canonical_name": "마찰음",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '마찰음'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "마찰음은 없어요",
+        "마찰음 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "농흉"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_박동성_통증",
+      "canonical_name": "박동성 통증",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '박동성 통증'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "박동성 통증은 없어요",
+        "박동성 통증 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "두통"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_눈이_무거운_느낌",
+      "canonical_name": "눈이 무거운 느낌",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '눈이 무거운 느낌'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "눈이 무거운 느낌은 없어요",
+        "눈이 무거운 느낌 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "두통"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_압통",
+      "canonical_name": "압통",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '압통'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "압통은 없어요",
+        "압통 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "두통"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_뇌압상승증상",
+      "canonical_name": "뇌압상승증상",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '뇌압상승증상'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "뇌압상승증상은 없어요",
+        "뇌압상승증상 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "두통"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_기운없음",
+      "canonical_name": "기운없음",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '기운없음'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "기운없음은 없어요",
+        "기운없음 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "디프테리아"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_결막염",
+      "canonical_name": "결막염",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '결막염'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "결막염은 없어요",
+        "결막염 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "백일해"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_사지_부종",
+      "canonical_name": "사지 부종",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '사지 부종'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "사지 부종은 없어요",
+        "사지 부종 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "상대정맥 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_경정맥_확장",
+      "canonical_name": "경정맥 확장",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '경정맥 확장'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "경정맥 확장은 없어요",
+        "경정맥 확장 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "상대정맥 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_의식_저하",
+      "canonical_name": "의식 저하",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '의식 저하'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "의식 저하은 없어요",
+        "의식 저하 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "성인 호흡곤란 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_식욕부진",
+      "canonical_name": "식욕부진",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '식욕부진'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "식욕부진은 없어요",
+        "식욕부진 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "속립성 결핵"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_함몰가슴",
+      "canonical_name": "함몰가슴",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '함몰가슴'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "함몰가슴은 없어요",
+        "함몰가슴 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "신생아 호흡곤란증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_방사통",
+      "canonical_name": "방사통",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '방사통'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "방사통은 없어요",
+        "방사통 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "악성 중피종"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_질식",
+      "canonical_name": "질식",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '질식'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "질식은 없어요",
+        "질식 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "이물질에 의한 기도 막힘"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_급성_신부전",
+      "canonical_name": "급성 신부전",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '급성 신부전'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "급성 신부전은 없어요",
+        "급성 신부전 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "중동 호흡기 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_감기_증상",
+      "canonical_name": "감기 증상",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '감기 증상'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "감기 증상은 없어요",
+        "감기 증상 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "지역사회성 폐렴"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_검은색_가래",
+      "canonical_name": "검은색 가래",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '검은색 가래'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "검은색 가래은 없어요",
+        "검은색 가래 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "진폐증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_서맥",
+      "canonical_name": "서맥",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '서맥'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "서맥은 없어요",
+        "서맥 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "태변 흡인 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_근긴장의_이상",
+      "canonical_name": "근긴장의 이상",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '근긴장의 이상'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "근긴장의 이상은 없어요",
+        "근긴장의 이상 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "태변 흡인 증후군"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_하지부종",
+      "canonical_name": "하지부종",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '하지부종'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "하지부종은 없어요",
+        "하지부종 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "폐기종"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_흉수",
+      "canonical_name": "흉수",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '흉수'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "흉수은 없어요",
+        "흉수 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "폐렴"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_폐부종",
+      "canonical_name": "폐부종",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '폐부종'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "폐부종은 없어요",
+        "폐부종 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "폐부종"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_말초부종",
+      "canonical_name": "말초부종",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '말초부종'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "말초부종은 없어요",
+        "말초부종 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "폐부종"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_온몸이_떨림",
+      "canonical_name": "온몸이 떨림",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '온몸이 떨림'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "온몸이 떨림은 없어요",
+        "온몸이 떨림 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "호흡성 산증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_피부홍조",
+      "canonical_name": "피부홍조",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '피부홍조'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "피부홍조은 없어요",
+        "피부홍조 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "호흡성 산증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_발한",
+      "canonical_name": "발한",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '발한'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "발한은 없어요",
+        "발한 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "호흡성 산증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_지남력_장애",
+      "canonical_name": "지남력 장애",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '지남력 장애'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "지남력 장애은 없어요",
+        "지남력 장애 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "호흡성 산증"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_창백",
+      "canonical_name": "창백",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '창백'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "창백은 없어요",
+        "창백 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "횡격막 탈장"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_탈장",
+      "canonical_name": "탈장",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '탈장'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "탈장은 없어요",
+        "탈장 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "횡격막 탈장"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_복벽이_움푹_들어감",
+      "canonical_name": "복벽이 움푹 들어감",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '복벽이 움푹 들어감'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "복벽이 움푹 들어감은 없어요",
+        "복벽이 움푹 들어감 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "횡격막 탈장"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_사망",
+      "canonical_name": "사망",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '사망'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "사망은 없어요",
+        "사망 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "후두개염"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_폐기능저하",
+      "canonical_name": "폐기능저하",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '폐기능저하'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "폐기능저하은 없어요",
+        "폐기능저하 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "흉막 삼출"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_근력_약화",
+      "canonical_name": "근력 약화",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '근력 약화'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "근력 약화은 없어요",
+        "근력 약화 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "흉선암"
+      ],
+      "_completed": false
+    },
+    {
+      "slot_id": "kr_어지러움",
+      "canonical_name": "어지러움",
+      "definition": "TODO: 의학적 정의 한 줄",
+      "positive_examples": [
+        "TODO: 환자가 '어지러움'을 말할 때 자주 쓰는 표현 1",
+        "TODO: 표현 2",
+        "TODO: 표현 3 (사투리/구어체 포함 가능)"
+      ],
+      "ambiguous_examples": [],
+      "negative_examples": [
+        "어지러움은 없어요",
+        "어지러움 안 해요"
+      ],
+      "risk_level": "normal",
+      "disease_count": 1,
+      "related_diseases": [
+        "흉선암"
+      ],
+      "_completed": false
+    }
+  ],
+  "diseases": [
+    {
+      "disease_name_kr": "가습기 살균제 연관 폐질환",
+      "disease_name_en": "Humidifier disinfectant-associated lung injury",
+      "key_symptoms": [
+        "심부전",
+        "호흡곤란",
+        "기침",
+        "폐동맥 고혈압",
+        "다발성 장기부전 증상"
+      ]
+    },
+    {
+      "disease_name_kr": "객혈",
+      "disease_name_en": "Hemoptysis",
+      "key_symptoms": [
+        "가래",
+        "거품이 섞인 가래",
+        "객혈"
+      ]
+    },
+    {
+      "disease_name_kr": "결핵",
+      "disease_name_en": "Tuberculosis",
+      "key_symptoms": [
+        "체중감소",
+        "객혈",
+        "기침",
+        "가래",
+        "열"
+      ]
+    },
+    {
+      "disease_name_kr": "공기가슴증",
+      "disease_name_en": "기흉",
+      "key_symptoms": [
+        "흉통",
+        "호흡곤란"
+      ]
+    },
+    {
+      "disease_name_kr": "과호흡 증후군",
+      "disease_name_en": "Hyperventilation syndrome",
+      "key_symptoms": [
+        "불안",
+        "복부 통증",
+        "복부팽만감",
+        "부정맥",
+        "의식 변화",
+        "흉부압박감",
+        "호흡곤란",
+        "인지장애",
+        "가슴 두근거림"
+      ]
+    },
+    {
+      "disease_name_kr": "규폐증",
+      "disease_name_en": "Silicosis",
+      "key_symptoms": [
+        "가래",
+        "기침",
+        "운동 시 호흡곤란"
+      ]
+    },
+    {
+      "disease_name_kr": "급성 기관지염",
+      "disease_name_en": "Acute bronchitis",
+      "key_symptoms": [
+        "기침",
+        "호흡곤란",
+        "가래",
+        "천명음"
+      ]
+    },
+    {
+      "disease_name_kr": "기관 협착",
+      "disease_name_en": "Stenosis of trachea",
+      "key_symptoms": [
+        "호흡곤란",
+        "반복되는 폐렴",
+        "사래걸림"
+      ]
+    },
+    {
+      "disease_name_kr": "기관지폐 형성이상",
+      "disease_name_en": "Bronchopulmonary dysplasia",
+      "key_symptoms": [
+        "고탄산증",
+        "수유 곤란",
+        "저산소증",
+        "호기의 증가",
+        "천식",
+        "흉곽 팽윤"
+      ]
+    },
+    {
+      "disease_name_kr": "기관지확장증",
+      "disease_name_en": "Bronchiectasis",
+      "key_symptoms": [
+        "천명음",
+        "곤봉지",
+        "가래",
+        "기침",
+        "체중감소",
+        "객혈",
+        "빈혈"
+      ]
+    },
+    {
+      "disease_name_kr": "꽃가루 알레르기",
+      "disease_name_en": "Pollen allergy",
+      "key_symptoms": [
+        "눈의 충혈",
+        "재채기",
+        "눈꼽",
+        "호흡곤란",
+        "기침"
+      ]
+    },
+    {
+      "disease_name_kr": "낭종성 폐질환",
+      "disease_name_en": "Cystic Lung Disease",
+      "key_symptoms": [
+        "호흡기감염",
+        "호흡곤란",
+        "기침",
+        "객혈"
+      ]
+    },
+    {
+      "disease_name_kr": "농흉",
+      "disease_name_en": "Pyothorax, Empyema",
+      "key_symptoms": [
+        "마찰음",
+        "흉부압박감",
+        "화농성 객담",
+        "빈맥",
+        "빈호흡",
+        "흉통",
+        "호흡곤란",
+        "기침",
+        "가슴 답답"
+      ]
+    },
+    {
+      "disease_name_kr": "늑막염",
+      "disease_name_en": "Pleurisy",
+      "key_symptoms": [
+        "호흡곤란",
+        "열",
+        "권태감",
+        "가래",
+        "가슴 답답",
+        "기침",
+        "오한",
+        "흉통"
+      ]
+    },
+    {
+      "disease_name_kr": "두통",
+      "disease_name_en": "Headache",
+      "key_symptoms": [
+        "박동성 통증",
+        "눈이 무거운 느낌",
+        "압통",
+        "뇌압상승증상"
+      ]
+    },
+    {
+      "disease_name_kr": "디프테리아",
+      "disease_name_en": "Diphtheritia",
+      "key_symptoms": [
+        "기침",
+        "열",
+        "빈맥",
+        "기운없음",
+        "콧물",
+        "목의 통증"
+      ]
+    },
+    {
+      "disease_name_kr": "만성 기관지염",
+      "disease_name_en": "Chronic bronchitis",
+      "key_symptoms": [
+        "운동 시 호흡곤란",
+        "기침",
+        "가래",
+        "객혈"
+      ]
+    },
+    {
+      "disease_name_kr": "만성 기침",
+      "disease_name_en": "Chronic cough",
+      "key_symptoms": [
+        "코막힘",
+        "기침"
+      ]
+    },
+    {
+      "disease_name_kr": "만성 폐쇄성 폐질환",
+      "disease_name_en": "Chronic obstructive pulmonary disease",
+      "key_symptoms": [
+        "천명음",
+        "호흡곤란",
+        "기침",
+        "흉곽 팽윤",
+        "가래",
+        "피로감",
+        "곤봉지",
+        "운동 시 호흡곤란"
+      ]
+    },
+    {
+      "disease_name_kr": "만성 폐질환",
+      "disease_name_en": "Chronic lung disease",
+      "key_symptoms": [
+        "기침",
+        "가래",
+        "객혈"
+      ]
+    },
+    {
+      "disease_name_kr": "미만성 간질성 폐질환",
+      "disease_name_en": "Diffuse Interstitial lung disease",
+      "key_symptoms": [
+        "호흡곤란",
+        "기침",
+        "운동 시 호흡곤란",
+        "열",
+        "곤봉지",
+        "가래",
+        "체중감소"
+      ]
+    },
+    {
+      "disease_name_kr": "백일해",
+      "disease_name_en": "Pertussis",
+      "key_symptoms": [
+        "결막염",
+        "콧물",
+        "구토",
+        "기침"
+      ]
+    },
+    {
+      "disease_name_kr": "병원 감염성 폐렴",
+      "disease_name_en": "Hospital acquired pneumonia (HAP",
+      "key_symptoms": [
+        "흉통",
+        "근육통",
+        "가래",
+        "열",
+        "오한",
+        "기침"
+      ]
+    },
+    {
+      "disease_name_kr": "비소세포성 폐암",
+      "disease_name_en": "Non-small cell lung cancer",
+      "key_symptoms": [
+        "호흡곤란",
+        "흉통",
+        "객혈",
+        "기침"
+      ]
+    },
+    {
+      "disease_name_kr": "상기도 감염",
+      "disease_name_en": "Upper respiratory infections",
+      "key_symptoms": [
+        "기침",
+        "열",
+        "재채기",
+        "피로감",
+        "목의 통증",
+        "두통",
+        "코막힘",
+        "콧물"
+      ]
+    },
+    {
+      "disease_name_kr": "상대정맥 증후군",
+      "disease_name_en": "Superior vena cava Syndrome",
+      "key_symptoms": [
+        "사지 부종",
+        "호흡곤란",
+        "청색증",
+        "삼키기 곤란",
+        "경정맥 확장",
+        "흉통",
+        "기침"
+      ]
+    },
+    {
+      "disease_name_kr": "성인 호흡곤란 증후군",
+      "disease_name_en": "Adult respiratory distress syndrome",
+      "key_symptoms": [
+        "천명음",
+        "호흡곤란",
+        "의식 저하",
+        "청색증"
+      ]
+    },
+    {
+      "disease_name_kr": "소세포성 폐암",
+      "disease_name_en": "Small cell lung cancer",
+      "key_symptoms": [
+        "천명음",
+        "기침",
+        "객혈"
+      ]
+    },
+    {
+      "disease_name_kr": "속립성 결핵",
+      "disease_name_en": "Miliary tuberculosis",
+      "key_symptoms": [
+        "가래",
+        "식욕부진",
+        "열",
+        "체중감소",
+        "기침",
+        "객혈"
+      ]
+    },
+    {
+      "disease_name_kr": "신생아 호흡곤란증후군",
+      "disease_name_en": "Neonatal respiratory distress syndrome",
+      "key_symptoms": [
+        "함몰가슴",
+        "호흡곤란",
+        "청색증"
+      ]
+    },
+    {
+      "disease_name_kr": "신종 플루",
+      "disease_name_en": "Novel swine-origin influenza A(H1N1",
+      "key_symptoms": [
+        "오한",
+        "두통",
+        "목의 통증",
+        "구토",
+        "근육통",
+        "설사"
+      ]
+    },
+    {
+      "disease_name_kr": "아스페르길루스증",
+      "disease_name_en": "Aspergillosis",
+      "key_symptoms": [
+        "천명음",
+        "오한",
+        "객혈",
+        "호흡곤란",
+        "열"
+      ]
+    },
+    {
+      "disease_name_kr": "악성 종격동 종양",
+      "disease_name_en": "Malignant mediastinal tumor",
+      "key_symptoms": [
+        "열",
+        "무증상",
+        "기침",
+        "흉통"
+      ]
+    },
+    {
+      "disease_name_kr": "악성 중피종",
+      "disease_name_en": "Malignant mesothelioma",
+      "key_symptoms": [
+        "기침",
+        "호흡곤란",
+        "체중감소",
+        "방사통",
+        "목소리 변화",
+        "흉통",
+        "피로감"
+      ]
+    },
+    {
+      "disease_name_kr": "악성 흉막 삼출",
+      "disease_name_en": "Malignant pleural effusion",
+      "key_symptoms": [
+        "흉통",
+        "불안",
+        "호흡곤란",
+        "기침"
+      ]
+    },
+    {
+      "disease_name_kr": "양성 종격동 종양",
+      "disease_name_en": "Benign mediastinal tumor",
+      "key_symptoms": [
+        "흉통",
+        "기침",
+        "목소리 변화",
+        "천명음",
+        "호흡곤란",
+        "무증상",
+        "삼키기 곤란"
+      ]
+    },
+    {
+      "disease_name_kr": "이물질에 의한 기도 막힘",
+      "disease_name_en": "Airway obstruction",
+      "key_symptoms": [
+        "질식",
+        "청색증",
+        "의식 변화",
+        "호흡곤란"
+      ]
+    },
+    {
+      "disease_name_kr": "인플루엔자",
+      "disease_name_en": "Influenza",
+      "key_symptoms": [
+        "열",
+        "오한",
+        "구토",
+        "두통",
+        "근육통",
+        "목의 통증",
+        "설사"
+      ]
+    },
+    {
+      "disease_name_kr": "재발성 천명",
+      "disease_name_en": "Recurrent wheeze",
+      "key_symptoms": [
+        "천명음"
+      ]
+    },
+    {
+      "disease_name_kr": "종격동염",
+      "disease_name_en": "Mediastinitis",
+      "key_symptoms": [
+        "삼키기 곤란",
+        "호흡곤란",
+        "흉통",
+        "가슴 답답",
+        "열",
+        "오한"
+      ]
+    },
+    {
+      "disease_name_kr": "중동 호흡기 증후군",
+      "disease_name_en": "MERS",
+      "key_symptoms": [
+        "호흡곤란",
+        "급성 신부전",
+        "기침",
+        "열"
+      ]
+    },
+    {
+      "disease_name_kr": "중증 급성 호흡기 증후군",
+      "disease_name_en": "Severe Acute Respiratory Syndrom",
+      "key_symptoms": [
+        "두통",
+        "호흡곤란",
+        "근육통",
+        "기침",
+        "권태감",
+        "열",
+        "오한"
+      ]
+    },
+    {
+      "disease_name_kr": "지역사회성 폐렴",
+      "disease_name_en": "Community acquired pneumonia",
+      "key_symptoms": [
+        "가래",
+        "기침",
+        "흉통",
+        "감기 증상",
+        "호흡곤란"
+      ]
+    },
+    {
+      "disease_name_kr": "진폐증",
+      "disease_name_en": "Pneumoconiosis",
+      "key_symptoms": [
+        "운동 시 호흡곤란",
+        "기침",
+        "검은색 가래"
+      ]
+    },
+    {
+      "disease_name_kr": "천식",
+      "disease_name_en": "Asthma",
+      "key_symptoms": [
+        "가슴 답답",
+        "가래",
+        "천명음",
+        "호흡곤란",
+        "기침"
+      ]
+    },
+    {
+      "disease_name_kr": "코로나-19",
+      "disease_name_en": "COVID-19",
+      "key_symptoms": [
+        "호흡곤란",
+        "기침",
+        "두통",
+        "근육통",
+        "목의 통증",
+        "열",
+        "가래",
+        "피로감"
+      ]
+    },
+    {
+      "disease_name_kr": "태변 흡인 증후군",
+      "disease_name_en": "Meconium aspiration syndrome",
+      "key_symptoms": [
+        "저산소증",
+        "서맥",
+        "청색증",
+        "빈호흡",
+        "호흡곤란",
+        "근긴장의 이상"
+      ]
+    },
+    {
+      "disease_name_kr": "특발성 폐섬유화증",
+      "disease_name_en": "Idiopathic pulmonary fibrosis",
+      "key_symptoms": [
+        "운동 시 호흡곤란",
+        "기침",
+        "저산소증",
+        "호흡곤란",
+        "곤봉지"
+      ]
+    },
+    {
+      "disease_name_kr": "폐 농양",
+      "disease_name_en": "Abscess of lung",
+      "key_symptoms": [
+        "체중감소",
+        "화농성 객담",
+        "기침",
+        "열",
+        "호흡곤란"
+      ]
+    },
+    {
+      "disease_name_kr": "폐결절",
+      "disease_name_en": "Pulmonary nodule",
+      "key_symptoms": [
+        "무증상"
+      ]
+    },
+    {
+      "disease_name_kr": "폐결핵",
+      "disease_name_en": "Pulmonary tuberculosis",
+      "key_symptoms": [
+        "기침",
+        "가래",
+        "객혈",
+        "열",
+        "체중감소"
+      ]
+    },
+    {
+      "disease_name_kr": "폐기종",
+      "disease_name_en": "Emphysema",
+      "key_symptoms": [
+        "하지부종",
+        "기침",
+        "가슴 답답",
+        "청색증",
+        "가래",
+        "호흡곤란"
+      ]
+    },
+    {
+      "disease_name_kr": "폐렴",
+      "disease_name_en": "Pneumonia",
+      "key_symptoms": [
+        "흉수",
+        "오한",
+        "열",
+        "가래",
+        "흉통",
+        "호흡곤란",
+        "피로감",
+        "두통",
+        "기침"
+      ]
+    },
+    {
+      "disease_name_kr": "폐렴간균에 의한 폐렴",
+      "disease_name_en": "Klebsiella pneumoniae infection",
+      "key_symptoms": [
+        "오한",
+        "객혈",
+        "흉통",
+        "호흡곤란",
+        "열"
+      ]
+    },
+    {
+      "disease_name_kr": "폐부종",
+      "disease_name_en": "Pulmonary edema",
+      "key_symptoms": [
+        "폐부종",
+        "기침",
+        "말초부종",
+        "객혈",
+        "청색증"
+      ]
+    },
+    {
+      "disease_name_kr": "폐암",
+      "disease_name_en": "Lung cancer",
+      "key_symptoms": [
+        "무증상",
+        "기침",
+        "호흡곤란",
+        "객혈",
+        "목소리 변화",
+        "흉통",
+        "체중감소"
+      ]
+    },
+    {
+      "disease_name_kr": "호흡성 산증",
+      "disease_name_en": "Respiratory Acidosis",
+      "key_symptoms": [
+        "온몸이 떨림",
+        "피부홍조",
+        "호흡곤란",
+        "발한",
+        "의식 변화",
+        "두통",
+        "불안",
+        "지남력 장애"
+      ]
+    },
+    {
+      "disease_name_kr": "횡격막 탈장",
+      "disease_name_en": "Diaphragmatic hernia",
+      "key_symptoms": [
+        "창백",
+        "호흡곤란",
+        "청색증",
+        "탈장",
+        "복벽이 움푹 들어감"
+      ]
+    },
+    {
+      "disease_name_kr": "후두개염",
+      "disease_name_en": "Epiglottitis",
+      "key_symptoms": [
+        "열",
+        "사망",
+        "호흡곤란",
+        "청색증",
+        "목소리 변화"
+      ]
+    },
+    {
+      "disease_name_kr": "흉막 삼출",
+      "disease_name_en": "Pleural effusion",
+      "key_symptoms": [
+        "빈호흡",
+        "폐기능저하",
+        "기침",
+        "호흡곤란",
+        "흉통"
+      ]
+    },
+    {
+      "disease_name_kr": "흉선암",
+      "disease_name_en": "Thymus Cancer",
+      "key_symptoms": [
+        "호흡곤란",
+        "흉통",
+        "근력 약화",
+        "어지러움",
+        "기침",
+        "두통",
+        "삼키기 곤란",
+        "무증상"
+      ]
+    },
+    {
+      "disease_name_kr": "흡인성 폐렴",
+      "disease_name_en": "Aspiration pneumonia",
+      "key_symptoms": []
+    },
+    {
+      "disease_name_kr": "히스토플라즈마증",
+      "disease_name_en": "Histoplasmosis",
+      "key_symptoms": [
+        "호흡곤란",
+        "흉통",
+        "기침",
+        "열",
+        "오한"
+      ]
+    }
+  ]
+}

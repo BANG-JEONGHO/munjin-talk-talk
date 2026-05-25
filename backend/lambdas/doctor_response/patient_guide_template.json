@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Phase B에서 의사 답변을 어르신 친화적 문장으로 변환하는 LLM 프롬프트 모음",
+    "model": "anthropic.claude-3-5-haiku-20241022-v1:0"
+  },
+  "templates": {
+    "default": {
+      "category": "default",
+      "description": "범용 어르신 친화 변환 프롬프트",
+      "prompt": "당신은 의사의 답변을 60-70대 어르신이 이해할 수 있는 친화적 문장으로 재구성하는 도우미입니다.\n의사가 입력한 내용의 의학적 의미는 보존하되, 어휘와 문장 구조만 어르신용으로 변환합니다.\n\n의사 답변: \"{doctor_answer}\"\n환자 질문 (원본): \"{patient_question}\"\n\n규칙:\n- 한 문장 30자 이내.\n- 의학 용어 → 일상 표현 (예: 성분명 → 일반 명칭).\n- 새 의학 정보 추가 절대 금지.\n- 진단명·처방 권유 표현 금지.\n- 약 종류·복용 기간·주의사항은 의사 답변 그대로 보존.\n- 톤: 친근하지만 존댓말 유지.\n\nJSON 형식으로만 출력:\n{\n  \"answer_simple\": [\"문장 1\", \"문장 2\", \"문장 3\"],\n  \"tts_emphasis_words\": [\"강조 단어 1\", \"강조 단어 2\"]\n}"
+    },
+    "drug_drug_interaction": {
+      "category": "drug_drug_interaction",
+      "description": "약물 상호작용 답변에 특화. 약 이름과 복용 방법을 정확히 보존.",
+      "additional_rules": [
+        "약 이름은 의사 답변 그대로 보존 (변형 금지)",
+        "복용 방법(시간, 횟수, 분량) 그대로 유지",
+        "약사에게 추가 확인 권유 문구 포함 권장",
+        "성분명(아세트아미노펜 등) 사용 시 '일반 감기약' 같은 친숙한 명칭 병기"
+      ]
+    },
+    "food_drug_interaction": {
+      "category": "food_drug_interaction",
+      "description": "음식·건강식품 답변에 특화.",
+      "additional_rules": [
+        "음식 이름과 용량 그대로 보존",
+        "'드셔도 됩니다 / 피해주세요' 같은 명확한 문장",
+        "양 표현은 '하루 한 잔', '일주일에 두 번' 등 일상적 표현"
+      ]
+    },
+    "treatment_duration": {
+      "category": "treatment_duration",
+      "description": "복약·치료 기간 답변에 특화.",
+      "additional_rules": [
+        "기간(며칠, 몇 주)을 명확하게",
+        "복약 중단·계속 여부 명시",
+        "다음 진료일 안내 포함"
+      ]
+    },
+    "prognosis": {
+      "category": "prognosis",
+      "description": "회복 시점·예후 답변에 특화.",
+      "additional_rules": [
+        "회복 기간 명확히 (보통 ~일, 빠르면 ~일)",
+        "재진 시점 안내",
+        "악화 시 다시 와야 하는 신호 안내"
+      ]
+    },
+    "prognosis_concern": {
+      "category": "prognosis_concern",
+      "description": "환자의 심각성 우려에 대한 답변. 안심 + 명확한 가이드.",
+      "additional_rules": [
+        "안심 문구로 시작",
+        "다만 ~할 경우 다시 오시라는 명확한 가이드",
+        "구체적 위험 신호 (피, 호흡곤란, 의식 변화 등) 명시"
+      ]
+    }
+  },
+  "validation_rules": {
+    "description": "Validator 2차에서 차단하는 패턴",
+    "forbidden_additions": [
+      "새 진단명 추가",
+      "새 약 이름 추가",
+      "의사 답변에 없는 수치(일수, 잔수, 알수 등) 추가",
+      "응급실·입원 권유 (의사가 명시하지 않은 경우)"
+    ]
+  }
+}

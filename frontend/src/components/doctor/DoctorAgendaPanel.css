@@ -1,0 +1,343 @@
+/* UI 개선안 2 - 우측 통합 패널 */
+
+.doctor-agenda-panel {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  height: fit-content;
+  position: sticky;
+  top: 16px;
+}
+
+.dap-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.dap-header h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f2347;
+}
+
+.dap-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #16a34a;
+  color: white;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.dap-sub {
+  margin: 0 0 16px 0;
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.6;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+/* ─── 환자 원문 상시 표시 ─── */
+.dap-full-quote {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+
+.dap-quote-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.dap-quote-head b {
+  font-size: 12px;
+  font-weight: 800;
+  color: #0c4a6e;
+  letter-spacing: 0.5px;
+}
+
+.dap-icon {
+  font-size: 14px;
+}
+
+.dap-full-quote p {
+  margin: 0;
+  font-size: 13px;
+  color: #075985;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ─── 잔여 텍스트 경고 ─── */
+.dap-remnant-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+  border-left: 4px solid #f97316;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+
+.dap-remnant-alert .dap-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.dap-remnant-alert b {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #c2410c;
+  margin-bottom: 4px;
+}
+
+.dap-remnant-alert p {
+  margin: 0 0 4px 0;
+  font-size: 12px;
+  color: #7c2d12;
+  font-style: italic;
+}
+
+.dap-remnant-alert small {
+  font-size: 11px;
+  font-weight: 700;
+  color: #9a3412;
+}
+
+/* ─── 질문 + 답변 인라인 ─── */
+.dap-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dap-question-block {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 14px;
+  border-left: 3px solid #16a34a;
+}
+
+.dap-question-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.dap-q-num {
+  display: inline-block;
+  flex-shrink: 0;
+  background: #16a34a;
+  color: white;
+  font-weight: 800;
+  font-size: 11px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+}
+
+.dap-q-meta {
+  flex: 1;
+}
+
+.dap-q-category {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #e0f2fe;
+  color: #075985;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+.dap-q-meta strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f2347;
+  line-height: 1.4;
+}
+
+.dap-q-quote {
+  background: white;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.dap-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.dap-q-quote p {
+  margin: 0;
+  font-size: 12px;
+  color: #29364a;
+  font-style: italic;
+}
+
+.dap-textarea {
+  width: 100%;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  line-height: 1.5;
+  resize: vertical;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.dap-textarea:focus {
+  outline: none;
+  border-color: #16a34a;
+  background: #f0fdf4;
+}
+
+.dap-char-count {
+  text-align: right;
+  font-size: 10px;
+  color: #94a3b8;
+  margin-top: 3px;
+}
+
+/* ─── 진료 메모 ─── */
+.dap-notes-block {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.dap-notes {
+  background: #fefce8;
+  border-color: #fde68a;
+}
+
+/* ─── 액션 ─── */
+.dap-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.dap-status {
+  font-size: 12px;
+  color: #15803d;
+  font-weight: 700;
+  flex: 1;
+}
+
+.dap-submit {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+
+.dap-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+}
+
+.dap-submit:disabled {
+  background: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   v4 추가 — 환자 발화 원문 디자인 고도화
+   ============================================ */
+
+.dap-full-quote-v4 {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 1px solid #93c5fd;
+  border-left: 4px solid #2563eb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.08);
+}
+.dap-quote-head-v4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.dap-quote-icon-v4 {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: rgba(37, 99, 235, 0.12);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.dap-quote-meta-v4 {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.dap-quote-meta-v4 b {
+  font-size: 13px;
+  font-weight: 1000;
+  color: #0f2347;
+  letter-spacing: -0.02em;
+}
+.dap-quote-meta-v4 small {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.3px;
+}
+.dap-quote-content-v4 {
+  margin: 0;
+  padding: 10px 14px;
+  background: white;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-style: italic;
+  font-weight: 600;
+  color: #1e3a5f;
+  line-height: 1.65;
+  border: 1px dashed #bfdbfe;
+}

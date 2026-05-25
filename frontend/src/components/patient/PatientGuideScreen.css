@@ -1,0 +1,218 @@
+/* Phase B - 환자 안내 화면 (큰 글자, 큰 버튼, 어르신 친화) */
+
+.patient-guide-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 32px 28px;
+  background: linear-gradient(180deg, #ecfdf5 0%, #f0fdf4 100%);
+  overflow-y: auto;
+  gap: 24px;
+}
+
+.pg-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.pg-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 900;
+  color: #0f2347;
+  line-height: 1.3;
+}
+
+.pg-sub {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #15803d;
+}
+
+.pg-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pg-empty {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 18px;
+  color: #64748b;
+  background: white;
+  border-radius: 16px;
+  line-height: 1.6;
+}
+
+.pg-card {
+  background: white;
+  border: 3px solid #bbf7d0;
+  border-radius: 16px;
+  padding: 24px;
+  transition: border-color 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.08);
+}
+
+.pg-card-active {
+  border-color: #16a34a;
+  transform: scale(1.01);
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.2);
+}
+
+.pg-question-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #16a34a;
+  color: white;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.pg-sentences {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.pg-sentence {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #0f2347;
+  padding-left: 18px;
+  position: relative;
+}
+
+.pg-sentence::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #16a34a;
+  font-weight: 900;
+}
+
+.pg-tts-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #0f2347;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pg-tts-btn:hover {
+  background: #1e3a5f;
+}
+
+.pg-tts-icon {
+  font-size: 18px;
+}
+
+.pg-notes-box {
+  background: #fefce8;
+  border: 2px solid #fde68a;
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.pg-notes-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  color: #92400e;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.pg-notes-box p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #7c4a04;
+  line-height: 1.6;
+}
+
+.pg-action-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.pg-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 16px;
+  background: white;
+  border: 2px solid #cbd5e1;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f2347;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.pg-action-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+.pg-action-btn span {
+  font-size: 20px;
+}
+
+.pg-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+  padding-top: 12px;
+  border-top: 1px dashed #cbd5e1;
+}
+
+/* 인쇄 스타일 (종이 출력 시) */
+@media print {
+  .pg-action-bar, .pg-tts-btn, .pg-footer {
+    display: none;
+  }
+  .pg-card {
+    border-color: black !important;
+    page-break-inside: avoid;
+  }
+  .pg-sentence {
+    font-size: 16pt;
+  }
+}
+
+/* ============================================
+   v4 추가 — TTS 재생/멈춤 토글
+   ============================================ */
+.pg-tts-btn.playing {
+  background: #f97316 !important;
+  color: white !important;
+  border-color: #f97316 !important;
+  animation: tts-pulse 1.5s ease-in-out infinite;
+}
+.pg-tts-btn.playing .pg-tts-icon {
+  filter: grayscale(1) brightness(2);
+}
+@keyframes tts-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+  50%      { box-shadow: 0 0 0 8px rgba(249, 115, 22, 0); }
+}
